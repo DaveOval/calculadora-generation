@@ -27,7 +27,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #e4e4e4;
+  background-color: #eaf3f2;
 }
 .container-cal{
   display: flex;
@@ -42,7 +42,7 @@ body{
   min-width: 320px;
   border-right: 8px solid #606062;
   border-radius: 20px;
-  border-bottom: 8px solid #606062;
+  border-bottom: 8px solid #676772;
 }
 .calculadora__visor{
   color: #D4D4DB;
@@ -84,7 +84,7 @@ body{
 }
 .apagada{
   background-color:#a4b2b3;
-  color: #a4b2b3;
+  color: #9aabac;
 }
 .calculadora__cuerpo{
   background-color: #2B3336;
