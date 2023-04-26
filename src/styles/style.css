@@ -1,6 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #000000 #ffffff;
+  }
 
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 2px;
+  }
 
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e4e4e4;
+}
+.container-cal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .calculadora{
   background-color: #0B0B11;
   border-radius: 10px 10px 20px 20px;
@@ -32,11 +66,12 @@
 .calculadora__pantalla{
   width: 100%;
   height: fit-content;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   background: #000000;
   font-family: 'Orbitron', sans-serif;
   text-align: right;
-  height: 5rem;
+  height: 6rem;
+  
 }
 .calculadora__pantalla-display{
   background-color: #C8DCDE;
@@ -45,6 +80,11 @@
   color: #000000;
   font-weight: 600;
   border-radius: 10px;
+  overflow-y: hidden;
+}
+.apagada{
+  background-color:#a4b2b3;
+  color: #a4b2b3;
 }
 .calculadora__cuerpo{
   background-color: #2B3336;
@@ -85,7 +125,9 @@ button:active{
   .bts-resp{
     display: flex;
   }
-  
+  .mas{
+    height: 3.5rem;
+  }
 }
 
 /* Path: calculadora-generation\src\styles\style.css */

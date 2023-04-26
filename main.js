@@ -14,16 +14,21 @@ const ocho = document.getElementById("8");
 const nueve = document.getElementById("9");
 const cero = document.getElementById("0");
 const dobleCero = document.getElementById("00");
+const point = document.getElementById(".");
 
 //botones de operaciones
 const suma = document.getElementById("+");
 const resta = document.getElementById("-");
 const multiplicacion = document.getElementById("X");
-const division = document.getElementById("/");
-/* const c = document.getElementById("c"); */
+const division = document.getElementById("÷");
+const raiz = document.getElementById("√");
+
+//boton encendido y apagado
+const on = document.getElementById("power");
 
 const igual = document.getElementById("igual");
 
+const energia = document.getElementById("energia");
 
 //listeners de los botones numericos
 uno.addEventListener("click", function(){
@@ -73,6 +78,19 @@ multiplicacion.addEventListener("click", function(){
 division.addEventListener("click", function(){
     imprimir("/");
 });
+raiz.addEventListener("click", function(){
+    let operacion = display.innerText;
+    let resultadoOperacion = Math.sqrt(operacion);
+    resultado.innerText = "Resultado:  " + resultadoOperacion;
+    display.innerText = "0";
+});
+point.addEventListener("click", function(){
+    imprimir(".");
+});
+
+power.addEventListener("click", function(){
+    powerFunction();
+});
 
 
 
@@ -85,6 +103,14 @@ const imprimir = (numero) => {
     display.innerText += numero;
 }
 
+//funcion para encender y apaagar la calculadora
+const powerFunction = () => {
+    if(energia.classList.contains("apagada")){
+        display.innerText = "0";
+        resultado.innerText = "Resultado:  0";
+    }
+    energia.classList.toggle("apagada");
+}
 
 
 igual.addEventListener("click", function(){
@@ -100,6 +126,7 @@ c.addEventListener("click", function(){
     display.innerText = "0";
     resultado.innerText = "Resultado:  0";
 });
+
 
 
 
